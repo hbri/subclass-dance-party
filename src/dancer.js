@@ -5,6 +5,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
   dancer.$node = $('<span class="dancer"></span>');
+  dancer.$node2 = $('<span class="dancer2"></span>');
 
   dancer.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
@@ -22,6 +23,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
       left: left
     };
     dancer.$node.css(styleSettings);
+    dancer.$node2.css(styleSettings);
   };
 
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -30,3 +32,5 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   return dancer;
 };
+
+//
