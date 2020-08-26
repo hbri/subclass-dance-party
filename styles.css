@@ -3,13 +3,16 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color: transparent;
+  background-image: url(src/backgroundimage2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpButton{
   padding:5px 12px;
   float:right;
 }
@@ -26,8 +29,56 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.hover{
+  right: 0 !important;
+  opacity: .25;
+}
+
 .dancer2{
-  border:8px solid rgb(153, 0, 255);
+  border:8px solid rgb(204, 86, 228);
   border-radius:10px;
   position:absolute;
+}
+
+.dancer3{
+  /* border:8px solid rgb(22, 236, 94);
+  border-radius:10px; */
+  position:absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid rgb(19, 252, 50);
+}
+
+.dancer4{
+  border:8px solid rgb(255, 15, 235);
+  border-radius:10px;
+  position:absolute;
+
+}
+
+.dancer4:hover{
+  border:12px solid rgb(238, 98, 43);
+  border-radius:10px;
+  position:absolute;
+}
+
+.dancer5{
+
+  background-color: transparent;
+  z-index: 1;
+  position:absolute;
+  width: 100px;
+  height: auto;
+
+}
+
+.dancer5:hover{
+
+  background-color: transparent;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+
 }

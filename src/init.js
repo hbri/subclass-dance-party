@@ -27,8 +27,51 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    if (window.dancers.length < 7) {
+      $('body').append(dancer.$node);
+      window.dancers.push(dancer);
+    } else {
+      dancer.$node.css('padding', 50);
+      $('body').append(dancer.$node);
+      window.dancers.push(dancer);
+    }
+
+
 
   });
+
+  $('.lineUpButton').on('click', function(event) {
+    // iterate over dancers array
+    for (var i = 0; i < window.dancers.length; i++) {
+      var currentDancer = window.dancers[i];
+      currentDancer.$node.css('left', 0);
+    }
+
+  });
+
+  $('.hover').on('mouseover', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      var currentDancer = window.dancers[i];
+      currentDancer.$node.css('left', 0);
+    }
+  });
+
+  $('.dancer5').on('mouseover', '.dancer5', function(event) {
+    for (var j = 0; j < window.dancers.length; j++) {
+      var hoverDancer = window.dancers[i];
+      hoverDancer.$node.addClass('hover');
+    }
+  });
+
+  $('.dancer5').on('mouseleave', '.dancer5', function(event) {
+    $(this.$node).removeClass('hover');
+  });
+
 });
+
+// use right angle to find minimum distance of each element
+  // iterate dancer
+    // check its left and top
+    // change remaining dancers' top + minVal and left + minVal;
+
 
